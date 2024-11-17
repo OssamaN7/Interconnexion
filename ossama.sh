@@ -1,6 +1,4 @@
 #!/bin/bash
-wa sir t7awa
-
 function display_banner {
     echo -e "\e[1;34m"  
     echo " _ _   _ _____ _____ ____   ____ ___              ____   ___  _   _ ____  _____ ____  "
