@@ -54,7 +54,7 @@ function check_gnome_terminal {
 
 function create_networks {
     echo -e "\e[1;32mCréation des réseaux Docker...\e[0m"
-    docker network create --driver=bridge --subnet=192.168.32.0/21 Reseau_Test || echo "Réseau Reseau_Test existe déjà."
+    docker network create --driver=bridge --subnet=192.168.32.0/21 Reseau_Test >/dev/null 2>&1 || echo "Réseau Reseau_Test existe déjà."
     docker network create --driver=bridge --subnet=120.0.176.0/21 Routeurs >/dev/null 2>&1 || echo "Réseau Routeurs existe déjà."
     docker network create --driver=bridge --subnet=120.0.160.0/21 Services >/dev/null 2>&1 || echo "Réseau Services existe déjà."
     echo -e "\e[1;32mRéseaux créés ou déjà existants.\e[0m"
@@ -91,10 +91,10 @@ function start_system {
     k=3
 	for service in DNS WEB SIP; do
 	    lowercase_service=${service,,}  # Convertir en minuscules
-	    docker build -t ${lowercase_service}_image ProjetInterconnexion/Services/${service}  || { 
+	    docker build -t ${lowercase_service}_image ProjetInterconnexion/Services/${service} >/dev/null 2>&1 || { 
 	        echo -e "\e[1;31mErreur lors de la construction de l'image $service\e[0m"; exit 1; 
 	    }
-	    docker run -dit --privileged --name $lowercase_service --network Services --ip 120.0.160.${k} ${lowercase_service}_image  || { 
+	    docker run -dit --privileged --name $lowercase_service --network Services --ip 120.0.160.${k} ${lowercase_service}_image >/dev/null 2>&1 || { 
 	        echo -e "\e[1;31mErreur lors du démarrage du service $service\e[0m"; exit 1; 
 	    }
 	    k=$((k + 1))
