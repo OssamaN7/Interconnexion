@@ -1,0 +1,11 @@
+$TTL    604800
+@       IN      SOA     ns.domainn7.fr. . (
+                              1         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.domainn7.fr.
+ns      IN      A       120.0.160.4     ; A CHANGER !!
+www     CNAME           ns.domainn7.fr.

@@ -1,0 +1,15 @@
+options {
+    directory "/var/cache/bind";
+
+    recursion yes;
+    listen-on { any; };
+
+# si DNS ne reconnait pas il demande au DNS ..
+
+    forwarders {
+            120.0.160.3; // A CHANGER IP DNS DMZ ??
+    };
+
+    allow-query { any; };
+    dnssec-validation no;
+};

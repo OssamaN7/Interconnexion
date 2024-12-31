@@ -1,0 +1,8 @@
+
+
+zone "domainn7.fr" {
+    type master;
+    file "/etc/bind/zones/domainn7.fr.zone";
+    allow-query {any; }; 
+// Autorise tout
+};
