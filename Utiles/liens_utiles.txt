@@ -1,0 +1,12 @@
+Configuration d'asterisk, base
+https://sip.goffinet.org/asterisk/uc-asterisk-base/#74-v%C3%A9rification-chan_pjsip
+Configuration d'asterisk, intermediare
+https://sip.goffinet.org/asterisk/uc-asterisk-intermediaire/
+Configuration d'asterisk, avance
+https://sip.goffinet.org/asterisk/uc-asterisk-avance/
+
+
+VoIP, opérations et config de base
+https://www.youtube.com/watch?v=B9jxYZM-Y58
+VoIP, tests et opérations de base:
+https://www.youtube.com/watch?v=KABWcnut58c
