@@ -1,7 +1,7 @@
 FROM kathara/quagga
 
 
-Mettre à jour le système et installer les outils réseau nécessaires
+# Mettre à jour le système et installer les outils réseau nécessaires
 RUN apt-get update && apt-get install -y \
     iproute2 iputils-ping \
     && apt-get clean \
