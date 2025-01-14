@@ -39,9 +39,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Exposer le port
 EXPOSE 8000
 
-# Commande pour démarrer l'application
-CMD ["python", "app.py"]
-WORKDIR /home/user
 
 # Garder le conteneur actif
 CMD ["/bin/bash"]
